@@ -26,7 +26,19 @@ class RegisterMVPEndPoint {
                         completionHandler("Usuario no existe", nil)
                     }
                 }
-                
+        }
+    }
+    
+    static func registerNewUser(username: String , password: String, completionHandler: @escaping(_ error: String?, _ userId: String?)->Void) {
+        var ref: DocumentReference? = nil
+         ref = Util.dbFirestoreConfig().collection("Usuarios").addDocument(data:
+            ["username": username,
+             "password": password]){error in
+                if let error = error {
+                    completionHandler(error.localizedDescription,nil)
+                }else {
+                    completionHandler(nil,ref!.documentID)
+                }
         }
     }
     

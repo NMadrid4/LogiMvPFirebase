@@ -18,6 +18,8 @@
 		37AC09202208D23100671ED1 /* RegisterMVPEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC091F2208D23100671ED1 /* RegisterMVPEndPoint.swift */; };
 		37AC09232208D63500671ED1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC09222208D63500671ED1 /* Util.swift */; };
 		37AC09252208DBC900671ED1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC09242208DBC900671ED1 /* WelcomeViewController.swift */; };
+		37AC09292208E16300671ED1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC09282208E16300671ED1 /* RegisterViewController.swift */; };
+		37AC092C2208E20900671ED1 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC092B2208E20900671ED1 /* RegisterPresenter.swift */; };
 		9EEC7C4C4699010E5E8B11B1 /* Pods_RegisterMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25D3DF85254F8BBE8F12366 /* Pods_RegisterMVP.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		37AC091F2208D23100671ED1 /* RegisterMVPEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMVPEndPoint.swift; sourceTree = "<group>"; };
 		37AC09222208D63500671ED1 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		37AC09242208DBC900671ED1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		37AC09282208E16300671ED1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		37AC092B2208E20900671ED1 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		B25D3DF85254F8BBE8F12366 /* Pods_RegisterMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RegisterMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F1C8045874CBDD14DF2B3A /* Pods-RegisterMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RegisterMVP/Pods-RegisterMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		E3EC757CF5876ECE2C8C9A2B /* Pods-RegisterMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RegisterMVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RegisterMVP/Pods-RegisterMVP.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,9 +91,8 @@
 				37AC09192208CDAB00671ED1 /* Model */,
 				37AC09172208CD9000671ED1 /* Presenter */,
 				37AC09182208CD9800671ED1 /* View */,
-				37AC09072208CC4100671ED1 /* Main.storyboard */,
+				37AC092A2208E16C00671ED1 /* Storyboard */,
 				37AC090A2208CC4200671ED1 /* Assets.xcassets */,
-				37AC090C2208CC4200671ED1 /* LaunchScreen.storyboard */,
 				37AC090F2208CC4200671ED1 /* Info.plist */,
 				37AC09152208CCB800671ED1 /* GoogleService-Info.plist */,
 			);
@@ -100,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				37AC091B2208CDCB00671ED1 /* LoginPresenter.swift */,
+				37AC092B2208E20900671ED1 /* RegisterPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -109,6 +113,7 @@
 			children = (
 				37AC09052208CC4100671ED1 /* ViewController.swift */,
 				37AC09242208DBC900671ED1 /* WelcomeViewController.swift */,
+				37AC09282208E16300671ED1 /* RegisterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +140,15 @@
 				37AC09222208D63500671ED1 /* Util.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		37AC092A2208E16C00671ED1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				37AC09072208CC4100671ED1 /* Main.storyboard */,
+				37AC090C2208CC4200671ED1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		A7D03EAF2BB3707E9E5A48B8 /* Pods */ = {
@@ -305,6 +319,8 @@
 				37AC09202208D23100671ED1 /* RegisterMVPEndPoint.swift in Sources */,
 				37AC09232208D63500671ED1 /* Util.swift in Sources */,
 				37AC091E2208D1E300671ED1 /* User.swift in Sources */,
+				37AC09292208E16300671ED1 /* RegisterViewController.swift in Sources */,
+				37AC092C2208E20900671ED1 /* RegisterPresenter.swift in Sources */,
 				37AC091C2208CDCB00671ED1 /* LoginPresenter.swift in Sources */,
 				37AC09062208CC4100671ED1 /* ViewController.swift in Sources */,
 				37AC09042208CC4100671ED1 /* AppDelegate.swift in Sources */,

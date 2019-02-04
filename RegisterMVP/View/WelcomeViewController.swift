@@ -16,6 +16,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         if let user = user {
             welcomeLabel.text = "Bienvenido \(user.name)"
         }

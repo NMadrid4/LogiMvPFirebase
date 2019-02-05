@@ -14,7 +14,6 @@ protocol LoginDelegate {
 }
 
 class LoginPresenter {
-    
     var loginDelegate: LoginDelegate
     
     init(loginDelegate: LoginDelegate) {

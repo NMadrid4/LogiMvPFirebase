@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3727ADE72209E187009FDE3F /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727ADE62209E187009FDE3F /* CommentTableViewCell.swift */; };
+		3727ADEB2209E2C9009FDE3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727ADEA2209E2C9009FDE3F /* Constants.swift */; };
+		3727ADED2209E4B2009FDE3F /* CommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727ADEC2209E4B2009FDE3F /* CommentsPresenter.swift */; };
 		37AC09042208CC4100671ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC09032208CC4100671ED1 /* AppDelegate.swift */; };
 		37AC09062208CC4100671ED1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC09052208CC4100671ED1 /* ViewController.swift */; };
 		37AC09092208CC4100671ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AC09072208CC4100671ED1 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3727ADE62209E187009FDE3F /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		3727ADEA2209E2C9009FDE3F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3727ADEC2209E4B2009FDE3F /* CommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsPresenter.swift; sourceTree = "<group>"; };
 		37AC09002208CC4100671ED1 /* RegisterMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AC09032208CC4100671ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37AC09052208CC4100671ED1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3727ADE52209E167009FDE3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3727ADE62209E187009FDE3F /* CommentTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		37AC08F72208CC4100671ED1 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +104,8 @@
 				37AC091A2208CDB000671ED1 /* Network */,
 				37AC09192208CDAB00671ED1 /* Model */,
 				37AC09172208CD9000671ED1 /* Presenter */,
-				37AC09182208CD9800671ED1 /* View */,
+				37AC09182208CD9800671ED1 /* ViewControllers */,
+				3727ADE52209E167009FDE3F /* Views */,
 				37AC092A2208E16C00671ED1 /* Storyboard */,
 				37AC090A2208CC4200671ED1 /* Assets.xcassets */,
 				37AC090F2208CC4200671ED1 /* Info.plist */,
@@ -104,18 +119,19 @@
 			children = (
 				37AC091B2208CDCB00671ED1 /* LoginPresenter.swift */,
 				37AC092B2208E20900671ED1 /* RegisterPresenter.swift */,
+				3727ADEC2209E4B2009FDE3F /* CommentsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		37AC09182208CD9800671ED1 /* View */ = {
+		37AC09182208CD9800671ED1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				37AC09052208CC4100671ED1 /* ViewController.swift */,
-				37AC09242208DBC900671ED1 /* WelcomeViewController.swift */,
 				37AC09282208E16300671ED1 /* RegisterViewController.swift */,
+				37AC09242208DBC900671ED1 /* WelcomeViewController.swift */,
 			);
-			path = View;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		37AC09192208CDAB00671ED1 /* Model */ = {
@@ -138,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				37AC09222208D63500671ED1 /* Util.swift */,
+				3727ADEA2209E2C9009FDE3F /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -316,13 +333,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3727ADED2209E4B2009FDE3F /* CommentsPresenter.swift in Sources */,
 				37AC09202208D23100671ED1 /* RegisterMVPEndPoint.swift in Sources */,
+				3727ADEB2209E2C9009FDE3F /* Constants.swift in Sources */,
 				37AC09232208D63500671ED1 /* Util.swift in Sources */,
 				37AC091E2208D1E300671ED1 /* User.swift in Sources */,
 				37AC09292208E16300671ED1 /* RegisterViewController.swift in Sources */,
 				37AC092C2208E20900671ED1 /* RegisterPresenter.swift in Sources */,
 				37AC091C2208CDCB00671ED1 /* LoginPresenter.swift in Sources */,
 				37AC09062208CC4100671ED1 /* ViewController.swift in Sources */,
+				3727ADE72209E187009FDE3F /* CommentTableViewCell.swift in Sources */,
 				37AC09042208CC4100671ED1 /* AppDelegate.swift in Sources */,
 				37AC09252208DBC900671ED1 /* WelcomeViewController.swift in Sources */,
 			);

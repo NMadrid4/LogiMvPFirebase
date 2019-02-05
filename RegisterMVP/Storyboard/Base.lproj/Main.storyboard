@@ -148,15 +148,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FmK-Dx-3zv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="84" id="iNp-wE-mDC" customClass="CommentTableViewCell" customModule="RegisterMVP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iNp-wE-mDC" id="Epj-Gj-Z2e">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lGP-ZT-CAu" id="KTv-Ia-Qam"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5XT-dx-NqU" firstAttribute="trailing" secondItem="FmK-Dx-3zv" secondAttribute="trailing" id="RHC-bb-ZCX"/>
+                            <constraint firstItem="FmK-Dx-3zv" firstAttribute="leading" secondItem="5XT-dx-NqU" secondAttribute="leading" id="Xc5-iV-07T"/>
                             <constraint firstItem="hme-TQ-2cz" firstAttribute="centerY" secondItem="s1M-Li-OHS" secondAttribute="centerY" id="c9f-l6-pNo"/>
                             <constraint firstItem="hme-TQ-2cz" firstAttribute="centerX" secondItem="s1M-Li-OHS" secondAttribute="centerX" id="cJm-o9-mct"/>
+                            <constraint firstItem="FmK-Dx-3zv" firstAttribute="top" secondItem="5XT-dx-NqU" secondAttribute="top" id="itI-Y1-pzJ"/>
+                            <constraint firstItem="FmK-Dx-3zv" firstAttribute="bottom" secondItem="5XT-dx-NqU" secondAttribute="bottom" id="nA6-8a-u1L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5XT-dx-NqU"/>
                     </view>
                     <connections>
+                        <outlet property="commentsTableView" destination="FmK-Dx-3zv" id="Gae-KQ-r3a"/>
                         <outlet property="welcomeLabel" destination="hme-TQ-2cz" id="9Ub-zH-mAg"/>
                     </connections>
                 </viewController>

@@ -12,8 +12,8 @@ import FirebaseFirestore
 class RegisterMVPEndPoint {
     
     static func loginUser(withUsername username: String, password: String, completionHandler: @escaping(_ error: String?, _ user: User?)->Void){
-        Util.dbFirestoreConfig().collection("Usuarios").whereField("username", isEqualTo: username)
-            .whereField("password", isEqualTo: password).getDocuments { (result, error) in
+        Util.dbFirestoreConfig().collection(Constants.FIREBASEUSERS).whereField(Constants.FIELDUSERNAME, isEqualTo: username)
+            .whereField(Constants.FIELDPWD, isEqualTo: password).getDocuments { (result, error) in
                 if let error = error {
                     completionHandler(error.localizedDescription, nil)
                 }
@@ -31,14 +31,24 @@ class RegisterMVPEndPoint {
     
     static func registerNewUser(username: String , password: String, completionHandler: @escaping(_ error: String?, _ userId: String?)->Void) {
         var ref: DocumentReference? = nil
-         ref = Util.dbFirestoreConfig().collection("Usuarios").addDocument(data:
-            ["username": username,
-             "password": password]){error in
+         ref = Util.dbFirestoreConfig().collection(Constants.FIREBASEUSERS).addDocument(data:
+            [Constants.FIELDUSERNAME: username,
+             Constants.FIELDPWD: password]){error in
                 if let error = error {
                     completionHandler(error.localizedDescription,nil)
                 }else {
                     completionHandler(nil,ref!.documentID)
                 }
+        }
+    }
+    
+    static func getComments(completionHandler: @escaping(_ error: String?, _ comments: [String]?)->Void) {
+        Util.dbFirestoreConfig().collection("Comentarios").getDocuments { (result, error) in
+            guard error == nil, let documents = result?.documents else {
+                completionHandler(error?.localizedDescription, nil)
+                return
+            }
+            completionHandler(nil,documents.compactMap({$0.data()["comentario"] as? String}))
         }
     }
     

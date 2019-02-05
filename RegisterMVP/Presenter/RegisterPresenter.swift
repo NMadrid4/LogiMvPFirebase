@@ -14,7 +14,6 @@ protocol registerDelegate {
 }
 
 class RegisterPresenter {
-    
     var registerDelegate: registerDelegate
     
     init(registerDelegate: registerDelegate) {

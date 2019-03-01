@@ -20,13 +20,20 @@ class RegisterViewController: UIViewController {
         presenter = RegisterPresenter(registerDelegate: self)
     }
     
+}
+
+//MARK: IBActions
+extension RegisterViewController {
     @IBAction func registerAction(_ sender: Any) {
         presenter?.registerNewUser(username: usernameTextField.text!, password: passwordTextField.text!)
     }
-    
 }
 
 extension RegisterViewController: registerDelegate {
+    func noConnection() {
+        print("No connection")
+    }
+    
     func registerSuccess() {
         usernameTextField.text = ""
         passwordTextField.text = ""

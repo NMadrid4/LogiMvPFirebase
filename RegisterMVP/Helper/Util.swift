@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
+import Reachability
 
 class Util {
     
@@ -18,5 +19,11 @@ class Util {
         db.settings = settings
         return db
     }
+    
+    static func userHasConnection() -> Bool {
+        let reach: Reachability! = Reachability()
+        return reach.connection != .none
+    }
+    
     
 }

@@ -8,9 +8,7 @@
 
 import Foundation
 
-class Constants {
-    
-    static let FIREBASEUSERS = "Usuarios"
-    static let FIELDUSERNAME = "username"
-    static let FIELDPWD = "password"
-}
+let FIREBASE_USERS = "Usuarios"
+let FIELD_USERNAME = "username"
+let FIELD_PWD = "password"
+let FIREBASE_COMMENTS = "Comentarios"

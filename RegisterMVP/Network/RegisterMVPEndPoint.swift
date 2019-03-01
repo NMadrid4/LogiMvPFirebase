@@ -12,8 +12,8 @@ import FirebaseFirestore
 class RegisterMVPEndPoint {
     
     static func loginUser(withUsername username: String, password: String, completionHandler: @escaping(_ error: String?, _ user: User?)->Void){
-        Util.dbFirestoreConfig().collection(Constants.FIREBASEUSERS).whereField(Constants.FIELDUSERNAME, isEqualTo: username)
-            .whereField(Constants.FIELDPWD, isEqualTo: password).getDocuments { (result, error) in
+        Util.dbFirestoreConfig().collection(FIREBASE_USERS).whereField(FIELD_USERNAME, isEqualTo: username)
+            .whereField(FIELD_PWD, isEqualTo: password).getDocuments { (result, error) in
                 if let error = error {
                     completionHandler(error.localizedDescription, nil)
                 }
@@ -31,9 +31,9 @@ class RegisterMVPEndPoint {
     
     static func registerNewUser(username: String , password: String, completionHandler: @escaping(_ error: String?, _ userId: String?)->Void) {
         var ref: DocumentReference? = nil
-         ref = Util.dbFirestoreConfig().collection(Constants.FIREBASEUSERS).addDocument(data:
-            [Constants.FIELDUSERNAME: username,
-             Constants.FIELDPWD: password]){error in
+         ref = Util.dbFirestoreConfig().collection(FIREBASE_USERS).addDocument(data:
+            [FIELD_USERNAME: username,
+             FIELD_PWD: password]){error in
                 if let error = error {
                     completionHandler(error.localizedDescription,nil)
                 }else {
@@ -43,7 +43,7 @@ class RegisterMVPEndPoint {
     }
     
     static func getComments(completionHandler: @escaping(_ error: String?, _ comments: [String]?)->Void) {
-        Util.dbFirestoreConfig().collection("Comentarios").getDocuments { (result, error) in
+        Util.dbFirestoreConfig().collection(FIREBASE_COMMENTS).getDocuments { (result, error) in
             guard error == nil, let documents = result?.documents else {
                 completionHandler(error?.localizedDescription, nil)
                 return

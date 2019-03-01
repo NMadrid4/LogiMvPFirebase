@@ -10,6 +10,8 @@
 		3727ADE72209E187009FDE3F /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727ADE62209E187009FDE3F /* CommentTableViewCell.swift */; };
 		3727ADEB2209E2C9009FDE3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727ADEA2209E2C9009FDE3F /* Constants.swift */; };
 		3727ADED2209E4B2009FDE3F /* CommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727ADEC2209E4B2009FDE3F /* CommentsPresenter.swift */; };
+		3727AE15220A0202009FDE3F /* RegisterMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727AE14220A0202009FDE3F /* RegisterMVPTests.swift */; };
+		376927EA220B4BD5002E76AA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376927E9220B4BD5002E76AA /* Home.storyboard */; };
 		37AC09042208CC4100671ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC09032208CC4100671ED1 /* AppDelegate.swift */; };
 		37AC09062208CC4100671ED1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC09052208CC4100671ED1 /* ViewController.swift */; };
 		37AC09092208CC4100671ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AC09072208CC4100671ED1 /* Main.storyboard */; };
@@ -26,10 +28,24 @@
 		9EEC7C4C4699010E5E8B11B1 /* Pods_RegisterMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25D3DF85254F8BBE8F12366 /* Pods_RegisterMVP.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3727AE17220A0202009FDE3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37AC08F82208CC4100671ED1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37AC08FF2208CC4100671ED1;
+			remoteInfo = RegisterMVP;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3727ADE62209E187009FDE3F /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		3727ADEA2209E2C9009FDE3F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3727ADEC2209E4B2009FDE3F /* CommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsPresenter.swift; sourceTree = "<group>"; };
+		3727AE12220A0201009FDE3F /* RegisterMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegisterMVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3727AE14220A0202009FDE3F /* RegisterMVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMVPTests.swift; sourceTree = "<group>"; };
+		3727AE16220A0202009FDE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376927E9220B4BD5002E76AA /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		37AC09002208CC4100671ED1 /* RegisterMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AC09032208CC4100671ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37AC09052208CC4100671ED1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +67,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3727AE0F220A0201009FDE3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37AC08FD2208CC4100671ED1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,10 +101,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3727AE13220A0202009FDE3F /* RegisterMVPTests */ = {
+			isa = PBXGroup;
+			children = (
+				3727AE14220A0202009FDE3F /* RegisterMVPTests.swift */,
+				3727AE16220A0202009FDE3F /* Info.plist */,
+			);
+			path = RegisterMVPTests;
+			sourceTree = "<group>";
+		};
 		37AC08F72208CC4100671ED1 = {
 			isa = PBXGroup;
 			children = (
 				37AC09022208CC4100671ED1 /* RegisterMVP */,
+				3727AE13220A0202009FDE3F /* RegisterMVPTests */,
 				37AC09012208CC4100671ED1 /* Products */,
 				A7D03EAF2BB3707E9E5A48B8 /* Pods */,
 				238DC6DC808E7B389CFC2745 /* Frameworks */,
@@ -92,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				37AC09002208CC4100671ED1 /* RegisterMVP.app */,
+				3727AE12220A0201009FDE3F /* RegisterMVPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +198,7 @@
 			children = (
 				37AC09072208CC4100671ED1 /* Main.storyboard */,
 				37AC090C2208CC4200671ED1 /* LaunchScreen.storyboard */,
+				376927E9220B4BD5002E76AA /* Home.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -180,6 +215,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3727AE11220A0201009FDE3F /* RegisterMVPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3727AE1B220A0202009FDE3F /* Build configuration list for PBXNativeTarget "RegisterMVPTests" */;
+			buildPhases = (
+				3727AE0E220A0201009FDE3F /* Sources */,
+				3727AE0F220A0201009FDE3F /* Frameworks */,
+				3727AE10220A0201009FDE3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3727AE18220A0202009FDE3F /* PBXTargetDependency */,
+			);
+			name = RegisterMVPTests;
+			productName = RegisterMVPTests;
+			productReference = 3727AE12220A0201009FDE3F /* RegisterMVPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37AC08FF2208CC4100671ED1 /* RegisterMVP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37AC09122208CC4200671ED1 /* Build configuration list for PBXNativeTarget "RegisterMVP" */;
@@ -210,6 +263,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Nicolas;
 				TargetAttributes = {
+					3727AE11220A0201009FDE3F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 37AC08FF2208CC4100671ED1;
+					};
 					37AC08FF2208CC4100671ED1 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -229,16 +286,25 @@
 			projectRoot = "";
 			targets = (
 				37AC08FF2208CC4100671ED1 /* RegisterMVP */,
+				3727AE11220A0201009FDE3F /* RegisterMVPTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3727AE10220A0201009FDE3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37AC08FE2208CC4100671ED1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				37AC090E2208CC4200671ED1 /* LaunchScreen.storyboard in Resources */,
+				376927EA220B4BD5002E76AA /* Home.storyboard in Resources */,
 				37AC09162208CCB800671ED1 /* GoogleService-Info.plist in Resources */,
 				37AC090B2208CC4200671ED1 /* Assets.xcassets in Resources */,
 				37AC09092208CC4100671ED1 /* Main.storyboard in Resources */,
@@ -304,6 +370,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -316,6 +383,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -329,6 +397,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3727AE0E220A0201009FDE3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3727AE15220A0202009FDE3F /* RegisterMVPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37AC08FC2208CC4100671ED1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +426,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3727AE18220A0202009FDE3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37AC08FF2208CC4100671ED1 /* RegisterMVP */;
+			targetProxy = 3727AE17220A0202009FDE3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		37AC09072208CC4100671ED1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -370,6 +454,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3727AE19220A0202009FDE3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54NXKM6J64;
+				INFOPLIST_FILE = RegisterMVPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = q.RegisterMVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegisterMVP.app/RegisterMVP";
+				USER_HEADER_SEARCH_PATHS = " $(SRCROOT)/Pods/**";
+			};
+			name = Debug;
+		};
+		3727AE1A220A0202009FDE3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54NXKM6J64;
+				INFOPLIST_FILE = RegisterMVPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = q.RegisterMVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RegisterMVP.app/RegisterMVP";
+				USER_HEADER_SEARCH_PATHS = " $(SRCROOT)/Pods/**";
+			};
+			name = Release;
+		};
 		37AC09102208CC4200671ED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,6 +620,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54NXKM6J64;
 				INFOPLIST_FILE = RegisterMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,6 +640,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54NXKM6J64;
 				INFOPLIST_FILE = RegisterMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +655,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3727AE1B220A0202009FDE3F /* Build configuration list for PBXNativeTarget "RegisterMVPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3727AE19220A0202009FDE3F /* Debug */,
+				3727AE1A220A0202009FDE3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37AC08FB2208CC4100671ED1 /* Build configuration list for PBXProject "RegisterMVP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -70,7 +70,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="yXa-5f-Zz0" id="8sa-j1-stL"/>
                         <outlet property="userTextField" destination="3Qw-7A-HEa" id="hTV-S1-5so"/>
-                        <segue destination="xLL-Al-eZP" kind="show" identifier="showSecondVC" id="AAB-Zc-BFY"/>
+                        <segue destination="gy6-FD-K3c" kind="show" identifier="showSecondVC" id="AAB-Zc-BFY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -134,6 +134,59 @@
             </objects>
             <point key="canvasLocation" x="140" y="948"/>
         </scene>
+        <!--Comentarios-->
+        <scene sceneID="FdN-Fy-oBw">
+            <objects>
+                <viewController id="lGP-ZT-CAu" customClass="WelcomeViewController" customModule="RegisterMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s1M-Li-OHS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hme-TQ-2cz">
+                                <rect key="frame" x="145.5" y="323" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FmK-Dx-3zv">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="84" id="iNp-wE-mDC" customClass="CommentTableViewCell" customModule="RegisterMVP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iNp-wE-mDC" id="Epj-Gj-Z2e">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lGP-ZT-CAu" id="KTv-Ia-Qam"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5XT-dx-NqU" firstAttribute="trailing" secondItem="FmK-Dx-3zv" secondAttribute="trailing" id="RHC-bb-ZCX"/>
+                            <constraint firstItem="FmK-Dx-3zv" firstAttribute="leading" secondItem="5XT-dx-NqU" secondAttribute="leading" id="Xc5-iV-07T"/>
+                            <constraint firstItem="hme-TQ-2cz" firstAttribute="centerY" secondItem="s1M-Li-OHS" secondAttribute="centerY" id="c9f-l6-pNo"/>
+                            <constraint firstItem="hme-TQ-2cz" firstAttribute="centerX" secondItem="s1M-Li-OHS" secondAttribute="centerX" id="cJm-o9-mct"/>
+                            <constraint firstItem="FmK-Dx-3zv" firstAttribute="top" secondItem="5XT-dx-NqU" secondAttribute="top" id="itI-Y1-pzJ"/>
+                            <constraint firstItem="FmK-Dx-3zv" firstAttribute="bottom" secondItem="5XT-dx-NqU" secondAttribute="bottom" id="nA6-8a-u1L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5XT-dx-NqU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Comentarios" id="5iy-QM-8kh"/>
+                    <connections>
+                        <outlet property="commentsTableView" destination="FmK-Dx-3zv" id="Gae-KQ-r3a"/>
+                        <outlet property="welcomeLabel" destination="hme-TQ-2cz" id="9Ub-zH-mAg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lS0-u3-oMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2866.4000000000001" y="133.5832083958021"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tej-1Y-gk2">
             <objects>
@@ -152,11 +205,21 @@
             </objects>
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="Qqt-pJ-ZZt">
+        <!--Navigation Controller-->
+        <scene sceneID="fVU-hR-CIJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="xLL-Al-eZP" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3LW-f7-EaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gy6-FD-K3c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="kzj-de-eaz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lGP-ZT-CAu" kind="relationship" relationship="rootViewController" id="IJU-I7-8u2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ye5-Ua-tNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927.2" y="133.5832083958021"/>
         </scene>

@@ -6,6 +6,7 @@ target 'RegisterMVP' do
   use_frameworks!
 
 pod 'Firebase/Core'
- pod 'Firebase/Firestore'
+pod 'Firebase/Firestore'
+pod 'ReachabilitySwift'
 
 end

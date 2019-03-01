@@ -34,8 +34,7 @@ class LoginPresenter {
                 if let user = user {
                     self.loginDelegate.loginSuccess(user: user)
                 }
-            }
-            
+            }            
         }
     }
     

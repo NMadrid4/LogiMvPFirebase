@@ -19,16 +19,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         presenter = LoginPresenter(loginDelegate: self)
     }
-
-    @IBAction func loginAction(_ sender: Any) {
-        self.presenter?.logUser(withName: userTextField.text!, password: passwordTextField.text!)
-    }
     
     private func showAlert(title: String, message: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let done = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
         alert.addAction(done)
         return alert
+    }
+
+    @IBAction func loginAction(_ sender: Any) {
+        self.presenter?.logUser(withName: userTextField.text!, password: passwordTextField.text!)
     }
 }
 
@@ -42,13 +42,4 @@ extension ViewController: LoginDelegate {
     }
 }
 
-//Segues
-extension ViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSecondVC" {
-            let secondVC = segue.destination as! WelcomeViewController
-            secondVC.user = sender as? User
-        }
-    }
-}
 

@@ -13,7 +13,6 @@ protocol CommentsDelegate {
     func commentsFail(message: String)
 }
 
-
 class CommentsPresenter {
     var commentsDelegate: CommentsDelegate
     

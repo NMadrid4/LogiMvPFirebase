@@ -10,21 +10,15 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var commentsTableView: UITableView!
     
     let commentCellIdentifier = "cell"
-    var user: User?
     var comments: [String]?
     var presenter: CommentsPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
         presenter = CommentsPresenter(commentsDelegate: self)
-        if let user = user {
-            welcomeLabel.text = "Bienvenido \(user.name)"
-        }
         presenter?.gettingComments()
     }
     
@@ -52,5 +46,5 @@ extension WelcomeViewController: CommentsDelegate {
     
     func commentsFail(message: String) {
         print(message)
-    }
+    }    
 }

@@ -12,12 +12,12 @@ import FirebaseFirestore
 class User {
     var name: String
     var password: String
-    
-    init(name: String, password: String) {
+
+    public init(name: String, password: String) {
         self.name = name
         self.password = password
     }
-    
+
     static func from(document: QueryDocumentSnapshot) -> User {
         return User.init(name: document.data()["username"] as! String, password: document.data()["password"] as! String)
     }
